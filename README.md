@@ -1,7 +1,8 @@
-@oclif/dev-cli
-===============
+# Fork of @oclif/dev-cli
 
-helpers for oclif CLIs
+/!\ WARNING: this is a special version that use only npm to pack the binaries. It doesn't use package.lock and npm-shrinkwrap as a dirty fix to allow usage with monorepos.
+
+helpers for oclif CLIs -
 
 [![Version](https://img.shields.io/npm/v/@oclif/dev-cli.svg)](https://npmjs.org/package/@oclif/dev-cli)
 [![CircleCI](https://circleci.com/gh/oclif/dev-cli/tree/master.svg?style=shield)](https://circleci.com/gh/oclif/dev-cli/tree/master)
@@ -12,13 +13,17 @@ helpers for oclif CLIs
 [![License](https://img.shields.io/npm/l/@oclif/dev-cli.svg)](https://github.com/oclif/dev-cli/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
-$ npm install -g @oclif/dev-cli
+$ npm install -g oclif-dev-cli-npm
 $ oclif-dev COMMAND
 running command...
 $ oclif-dev (-v|--version|version)
@@ -28,20 +33,27 @@ USAGE
   $ oclif-dev COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`oclif-dev help [COMMAND]`](#oclif-dev-help-command)
-* [`oclif-dev manifest [PATH]`](#oclif-dev-manifest-path)
-* [`oclif-dev pack`](#oclif-dev-pack)
-* [`oclif-dev pack:deb`](#oclif-dev-packdeb)
-* [`oclif-dev pack:macos`](#oclif-dev-packmacos)
-* [`oclif-dev pack:win`](#oclif-dev-packwin)
-* [`oclif-dev publish`](#oclif-dev-publish)
-* [`oclif-dev publish:deb`](#oclif-dev-publishdeb)
-* [`oclif-dev publish:macos`](#oclif-dev-publishmacos)
-* [`oclif-dev publish:win`](#oclif-dev-publishwin)
-* [`oclif-dev readme`](#oclif-dev-readme)
+
+- [Fork of @oclif/dev-cli](#fork-of-oclifdev-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [oclif-dev help [COMMAND]](#oclif-dev-help-command)
+  - [oclif-dev manifest [PATH]](#oclif-dev-manifest-path)
+  - [oclif-dev pack](#oclif-dev-pack)
+  - [oclif-dev pack:deb](#oclif-dev-packdeb)
+  - [oclif-dev pack:macos](#oclif-dev-packmacos)
+  - [oclif-dev pack:win](#oclif-dev-packwin)
+  - [oclif-dev publish](#oclif-dev-publish)
+  - [oclif-dev publish:deb](#oclif-dev-publishdeb)
+  - [oclif-dev publish:macos](#oclif-dev-publishmacos)
+  - [oclif-dev publish:win](#oclif-dev-publishwin)
+  - [oclif-dev readme](#oclif-dev-readme)
 
 ## `oclif-dev help [COMMAND]`
 
@@ -217,4 +229,5 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/readme.ts](https://github.com/oclif/dev-cli/blob/v1.22.2/src/commands/readme.ts)_
+
 <!-- commandsstop -->
