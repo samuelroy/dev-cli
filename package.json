@@ -1,12 +1,12 @@
 {
-  "name": "@oclif/dev-cli",
+  "name": "oclif-dev-cli-npm",
   "description": "helpers for oclif CLIs",
   "version": "1.22.2",
   "author": "Jeff Dickey @jdxcode",
   "bin": {
     "oclif-dev": "./bin/run"
   },
-  "bugs": "https://github.com/oclif/dev-cli/issues",
+  "bugs": "https://github.com/samuelroy/dev-cli/issues",
   "dependencies": {
     "@oclif/command": "^1.5.13",
     "@oclif/config": "^1.12.12",
@@ -52,7 +52,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/oclif/dev-cli",
+  "homepage": "https://github.com/samuelroy/dev-cli",
   "keywords": [
     "oclif"
   ],
