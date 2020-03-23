@@ -13,6 +13,7 @@ import {castArray, compact, sortBy, template, uniqBy} from '../util'
 const normalize = require('normalize-package-data')
 const columns = parseInt(process.env.COLUMNS!, 10) || 120
 const slugify = new (require('github-slugger') as any)()
+const spacifyTopics = name => name.replace(':', ' ')
 
 export default class Readme extends Command {
   static description = `adds commands to README.md in current directory
@@ -108,7 +109,7 @@ USAGE
       '# Command Topics\n',
       ...topics.map(t => {
         return compact([
-          `* [\`${config.bin} ${t.name}\`](${dir}/${t.name.replace(/:/g, '/')}.md)`,
+          `* [\`${config.bin} ${spacifyTopics(t.name)}\`](${dir}/${t.name.replace(/:/g, '/')}.md)`,
           template({config})(t.description || '').trim().split('\n')[0],
         ]).join(' - ')
       }),
@@ -147,7 +148,7 @@ USAGE
     return compact([
       header(),
       title,
-      '```\n' + help.command(c).trim() + '\n```',
+      '```\n' + spacifyTopics(help.command(c)).trim() + '\n```',
       this.commandCode(config, c),
     ]).join('\n\n')
   }
@@ -222,7 +223,7 @@ USAGE
       // const flags = Object.entries(command.flags)
       // .filter(([, v]) => !v.hidden)
       return compact([
-        command.id,
+        spacifyTopics(command.id),
         command.args.filter(a => !a.hidden).map(a => arg(a)).join(' '),
       ]).join(' ')
     }
