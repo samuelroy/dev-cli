@@ -1,8 +1,8 @@
 {
   "name": "oclif-dev-cli-npm",
-  "description": "helpers for oclif CLIs",
-  "version": "1.22.3",
-  "author": "Jeff Dickey @jdxcode",
+  "description": "helpers for oclif CLIs - forked to handle monorepo and spaced topics",
+  "version": "1.23.0",
+  "author": "Samuel Roy",
   "bin": {
     "oclif-dev": "./bin/run"
   },
